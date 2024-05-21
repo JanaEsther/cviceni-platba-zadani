@@ -8,13 +8,13 @@ function formatCreditCardNumber(cardNumber: string): string {
   const cleanedNumber = filterNonDigits(cardNumber);
 
   // Rozdělení čísla na skupiny po čtyřech číslicích
-  const groups = cleanedNumber.match(/.{1,4}/g);
-  if (!groups) {
+  const group = cleanedNumber.match(/.{1,4}/g);
+  if (!group) {
     return ''; // Neplatné číslo
   }
 
   // Sestavení řetězce s pomlčkami
-  const formattedNumber = groups.join('-');
+  const formattedNumber = group.join('-');
   return formattedNumber;
 }
 
