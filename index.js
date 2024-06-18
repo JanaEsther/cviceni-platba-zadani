@@ -17,3 +17,5 @@ function formatCreditCardNumber(cardNumber) {
 var userCardNumber = "1234-5678-9012-3456";
 var formattedNumber = formatCreditCardNumber(userCardNumber);
 console.log(formattedNumber); // Vypíše "1234-5678-9012-3456"
+
+
